@@ -147,8 +147,6 @@ describe "#display_board in 'lib/display_board.rb" do
       # *** Edit the line below ***
       board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"] # This is not correct
       
-      
-
       # Don't touch the following lines.
       output = capture_puts{ display_board(board) } if defined?(display_board)
       rows = output.split("\n")
@@ -160,6 +158,11 @@ describe "#display_board in 'lib/display_board.rb" do
       # You would code that expectation with:
       # expect(output).to include(" X | X | X ")
       # meaning you expect the entire output to at least include a matching row.
+        expect(rows[0]).to eq(" X | O | X ")
+        expect(rows[1]).to eq("-----------")
+        expect(rows[2]).to eq(" O | X | X ")
+        expect(rows[3]).to eq("-----------")
+        expect(rows[4]).to eq(" O | X | O ")
 
       # Uncomment the following lines of code by removing the # at line start.
       # Then edit the following lines to represent a board entirely filled with X.
