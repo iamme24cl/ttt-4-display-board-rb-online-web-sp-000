@@ -179,6 +179,11 @@ describe "#display_board in 'lib/display_board.rb" do
     it 'prints an entire board full of Os' do
        board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
        
+       output = capture_puts{ display_board(board) } if defined?(display_board)
+       rows = output.split("\n")
+       
+       
+       
        
       
       # Can you copy the syntax of the tests above to write a test for a board
